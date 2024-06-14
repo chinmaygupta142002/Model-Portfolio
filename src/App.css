@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@610&display=swap');
+
+body{
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 610;
+  font-style: normal;
+}
+
+.grid-cols-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.gallery{
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
+}
+.gallery {
+  padding: 0 12px;
+}
+
+@media (min-width: 1200px) {
+  .gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    column-width: 33%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gallery {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 80%;
+    column-width: 50%;
+    column-gap: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    column-width: 100%;
+  }
+}
+
+.model {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white; /* Change to white */
+  justify-content: center;
+  align-items: center;
+}
+
+.model.open {
+  display: flex;
+}
+
+.model img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.model .close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black; 
+}
+
